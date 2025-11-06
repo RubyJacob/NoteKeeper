@@ -25,7 +25,7 @@ function App() {
        <nav className="navbar bg-primary-subtle mb-5 border-bottom border-light-subtle">
        <div className="container-fluid">
         <div className="d-flex align-items-center justify-content-center ">
-        <img width={'100px'} height={'80px'} src='\original-d6184e48393fca2e3d2a3ac3809994b7-removebg-preview.png' alt="logo" className="d-inline-block align-text-center"/> 
+        <img width={'100px'} height={'80px'} src="./original-d6184e48393fca2e3d2a3ac3809994b7-removebg-preview.png" alt="logo" className="d-inline-block align-text-center"/> 
         <h3> NoteKeeper</h3>
         </div>
       <ul className="nav justify-content-end">
