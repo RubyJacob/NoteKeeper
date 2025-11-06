@@ -14,9 +14,7 @@ function App() {
   }
 
   const deleteNote = (index) =>{
-    const updated = [...notes];
-    updated.splice(index,1)
-    setNotes(updated)
+    setNotes(notes.filter((_, i) => i !== index));
   }
 
 
@@ -24,8 +22,8 @@ function App() {
     <div className="bg-primary-subtle" style={{minHeight:'100vh'}}>
        <nav className="navbar bg-primary-subtle mb-5 border-bottom border-light-subtle">
        <div className="container-fluid">
-        <div className="d-flex align-items-center justify-content-center ">
-        <img width={'100px'} height={'80px'} src="./original-d6184e48393fca2e3d2a3ac3809994b7-removebg-preview.png" alt="logo" className="d-inline-block align-text-center"/> 
+        <div className="d-flex align-items-center justify-content-center gap-3">
+        <img width={'100px'} height={'80px'} src="https://img.freepik.com/premium-vector/notes-icon-logo-vector-design-template_827767-4987.jpg" alt="logo" className="d-inline-block align-text-center"/> 
         <h3> NoteKeeper</h3>
         </div>
       <ul className="nav justify-content-end">
@@ -55,7 +53,7 @@ function App() {
      {
       notes.map((note,index)=>(
         <div key={index} style={{minHeight:'250px',width:'300px',backgroundColor:'rgba(255,255,255,0.9)'}} className="m-5 shadow border solid 1px rounded-5 text-center p-3">
-           <h3>{note.title}  <TiDelete onClick={deleteNote} className='fs-2 text-danger ' /></h3>
+           <h3>{note.title}  <TiDelete onClick={() => deleteNote(index)} className='fs-2 text-danger ' /></h3>
            <hr />
             <p className='fs-4'>{note.text}</p>
           </div>
